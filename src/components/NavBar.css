@@ -1,0 +1,105 @@
+#nav-bar{
+    height: 10vh;
+    min-height: 70px;
+    background: linear-gradient(45deg, rgba(192,186,179,0.95), rgba(238,234,231,.95));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    box-shadow: 5px 5px 15px 5px #968f82;
+   
+}
+
+#nav-bar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 800px;
+    padding: 0;
+    list-style: none;
+    
+}
+
+
+
+#nav-bar a{
+    text-decoration: none;
+    color: #3c3d38;
+    font-size: 1.3rem;
+}
+
+#nav-bar p{
+    font-family:monospace;
+    font-size: 2rem;    
+    color: #3c3d38;
+    padding: 0 2em;
+    /* text-align: center; */
+    text-shadow: 0 0 0.15em #3c3d38;
+    user-select: none;
+    white-space: nowrap;
+    filter: blur(0.007em);
+    animation: shake 2.5s linear forwards;
+
+  
+}
+#nav-bar p span{
+    border-top:2px solid #3c3d38 ;
+
+}
+
+@keyframes shake {
+    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+        filter: blur(0.018em);
+        transform: translateY(0.018em) rotate(0deg);
+    }
+
+    10%, 30%, 40%, 50%, 70%, 80%, 90% {
+        filter: blur(0.01em);
+        transform: translateY(-0.018em) rotate(0deg);
+    }
+
+    20%, 60% {
+        filter: blur(0.03em);
+        transform: translate(-0.018em, 0.018em) rotate(0deg);
+    }
+
+    45%, 85% {
+        filter: blur(0.03em);
+        transform: translate(0.018em, -0.018em) rotate(0deg);
+    }
+
+    100% {
+        filter: blur(0.007em);
+        transform: translate(0) rotate(-0.5deg);
+    }
+}
+
+#burger-menu{
+    display: none;
+}
+
+@media (max-width:1000px) {
+    #burger-menu{
+        display: flex;
+        padding: 0 2em;
+        font-size: 1.5rem;
+    }
+
+    #nav-bar ul{
+       flex-direction: column; 
+       position:absolute;
+       background-color:rgba(238,234,231,.95);
+       top: 80%;
+       width: 100%;
+       max-width: none;
+       height: 25vh;
+       min-height: 140px;
+       box-shadow: 5px 5px 15px 5px #968f82;
+
+      
+      
+
+    }
+}
