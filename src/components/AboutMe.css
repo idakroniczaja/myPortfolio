@@ -1,4 +1,99 @@
 #about{
-    height: 500px;
-    background-color:rosybrown;
+    display: flex;
+    background-color: white;
+
+}
+
+#about article{
+    display: flex;
+    align-items: center;
+    height: 60vh;
+ 
+
+}
+
+#about article .about-image{
+    width: 60%;
+
+}
+
+
+    
+#about article img{
+    width: 100%;
+
+}
+
+#about article .about-text{
+
+    width: 35%;
+    color: #3c3d38;
+    font-size: 1.5rem;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
+#about #greeting{
+    font-size: 2rem;
+    text-shadow: 0 0 0.15em #3c3d38;
+    animation: shake 2.5s linear infinite;
+   
+}
+
+#about #signature{
+    font-family: "Sofia", sans-serif;
+    text-align: end;
+}
+
+
+@media(max-width:1150px){
+    /* #about{
+        height: 90vh;
+    }
+    #about article{
+        justify-content: center;
+    }
+    #about article .about-image{
+        width: 100%;
+        
+
+        }
+
+        #about article .about-text{
+            width: 35%;
+            padding: 1em;
+            position: absolute;
+        }
+        #about article .about-image img{
+            filter: blur(5px);
+            width: 100%;
+              }
+        #about article .about-text{
+            
+                width: 65%;
+        
+
+
+            } */
+
+#about .about-image img{
+    display: none;
+}
+#about .about-image{
+     background-image: url(./artem-sapegin-ZMraoOybTLQ-unsplash.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    filter: blur(8px);
+    position: relative;
+
+}
+
+
+
 }

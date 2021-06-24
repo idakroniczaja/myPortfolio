@@ -4,7 +4,24 @@ import './AboutMe.css'
 export default function AboutMe({aboutRef}) {
     return (
         <section  ref={aboutRef} id='about' className='container'>
-            About me
+            <h2>about me</h2>
+            <article>
+
+                <div className='about-image'>
+                    <img  src='../images/artem-sapegin-ZMraoOybTLQ-unsplash.jpg'/>
+                </div> 
+
+                <div className='about-text'>
+                <p id='greeting'>Hello, my name is Ida! </p>
+                I was borni in Serbia, 
+                Eastern Europe and I currently live in Miami. 
+                I’m problem-solver passionate about creating digital experiences. 
+                I'm all about combining design with web development, 
+                balancing both in order to bring meaningful experiences alive. 
+                If you like my work, don’t hesitate to reach out.
+                <p id='signature'>Ida Kronic Zaja</p>
+                </div>
+            </article>
         </section>
     )
 }

@@ -42,28 +42,23 @@ useEffect(() => {
   },[window.innerWidth])
 
     return (
-        <nav id='nav-bar' className='container'>
+        <nav id='nav-bar'>
 
-        <p>Ida <br/><span>Development</span></p>
+        <p>Ida <br/><span id='nav-logo'>Development</span></p>
 
         <div id='burger-menu' onClick={()=>setToggle(!toggle)}>
         {toggle ? <TiTimes /> : <HiMenu />  } 
             
             
         </div>
-{window.innerWidth<1000 ? transition.map(({ item, props, key })=>{
+{transition.map(({ item, props, key })=>{
             return item && <animated.ul style={props}>
             <li onClick={scrollToHeader}><Link>Home</Link></li>
             <li onClick={scrollToAbout}><Link>About</Link></li>
             <li onClick={scrollToProjects}><Link>Projects</Link></li>
             <li onClick={scrollToContact}><Link>Contact</Link></li>
             </animated.ul>
-         }) :  <ul>
-                    <li onClick={scrollToHeader}><Link>Home</Link></li>
-                    <li onClick={scrollToAbout}><Link>About</Link></li>
-                    <li onClick={scrollToProjects}><Link>Projects</Link></li>
-                    <li onClick={scrollToContact}><Link>Contact</Link></li>
-              </ul>
+         }) 
 
          
          

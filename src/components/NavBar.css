@@ -1,5 +1,6 @@
 #nav-bar{
     height: 10vh;
+    width: 100%;
     min-height: 70px;
     background: linear-gradient(45deg, rgba(192,186,179,0.95), rgba(238,234,231,.95));
     display: flex;
@@ -8,6 +9,7 @@
     position: sticky;
     top: 0;
     box-shadow: 5px 5px 15px 5px #968f82;
+    z-index: 5;
    
 }
 
@@ -35,16 +37,16 @@
     font-size: 2rem;    
     color: #3c3d38;
     padding: 0 2em;
-    /* text-align: center; */
     text-shadow: 0 0 0.15em #3c3d38;
     user-select: none;
     white-space: nowrap;
     filter: blur(0.007em);
     animation: shake 2.5s linear forwards;
+    font-size:calc(1rem + 1vw); ;
 
   
 }
-#nav-bar p span{
+#nav-bar p #nav-logo{
     border-top:2px solid #3c3d38 ;
 
 }
