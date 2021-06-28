@@ -83,17 +83,27 @@
 #about .about-image img{
     display: none;
 }
+
 #about .about-image{
-     background-image: url(./artem-sapegin-ZMraoOybTLQ-unsplash.jpg);
+    background-image: url(./artem-sapegin-ZMraoOybTLQ-unsplash.jpg);
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
     filter: blur(8px);
-    position: relative;
+    position: absolute;
+    width: 10vw;
 
 }
 
+#about article .about-text{
+    /* width: 60%;
+    padding: 1em;
+    position: relative; */
 
+}
+ #about{
+       position: relative;
+    }
 
 }
