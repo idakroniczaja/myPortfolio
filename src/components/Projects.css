@@ -1,4 +1,101 @@
 #projects{
-    height: 500px;
-    background-color: sandybrown;
+    /* background-color: sandybrown; */
+}
+
+#projects article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5vh;
+  
+}
+
+#projects .singe-project{
+    width: 400px;
+    height: 400px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    margin: 0 3vh 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+#projects .singe-project:hover{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ #projects #bird:hover{
+ background-image: url(./bird.png);
+}
+
+#projects #fit-life:hover{
+    background-image: url(./fit-life-main.png);
+    background-position: top;
+   }
+
+#projects #food-and-cocktails:hover{
+    background-image: url(./foodAndCocktails.png);
+   }
+
+ #projects #creativeNess:hover{
+    background-image: url(./creativeNessMain.png);
+    background-position: top;
+}
+
+#projects #beauty-salon:hover{
+  background-image: url(./beauty-salon-main.png);
+}
+
+
+
+
+#projects .singe-project h3{
+    font-size: calc(1rem + 1vw);    
+    text-shadow: 0 0 0.15em #3c3d38;
+    animation: shake 2.5s linear infinite;
+}
+
+#projects .singe-project div{
+    padding: 1em;
+    text-align: justify;
+
+}
+
+#projects .singe-project:hover > div{
+display: none;
+}
+
+#projects .singe-project:hover > h3{
+    display: none;
+}
+
+@media (max-width:915px) {
+    #projects .singe-project{
+        width: 80%;
+    }
+
+    /* #projects #bird:hover{
+        background-image: url(./bird.png);
+       } */
+       
+       #projects #fit-life:hover{
+           background-image: url(./fitLife.png);
+          }
+       
+       #projects #food-and-cocktails:hover{
+           background-image: url(./foodAndCocktails.png);
+          }
+       
+        #projects #creativeNess:hover{
+           background-image: url(./creativeNess.png);
+       }
+       
+       #projects #beauty-salon:hover{
+         background-image: url(./beautyStudio.png);
+       }
 }

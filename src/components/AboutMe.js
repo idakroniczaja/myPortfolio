@@ -8,7 +8,7 @@ export default function AboutMe({aboutRef}) {
             <article>
 
                 <div className='about-image'>
-                    <img  src='../images/artem-sapegin-ZMraoOybTLQ-unsplash.jpg'/>
+                 
                 </div> 
 
                 <div className='about-text'>

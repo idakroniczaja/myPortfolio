@@ -27,7 +27,7 @@ h2{
   font-weight:100;
   text-shadow:  0 0 0.15em #3c3d38;
   color: #3c3d38;
-  filter: blur(0.007em);
+  filter: blur(0.01em);
   display: flex;
   align-items: center;
   justify-content: center;
