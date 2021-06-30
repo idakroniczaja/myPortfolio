@@ -1,5 +1,5 @@
 #projects{
-    /* background-color: sandybrown; */
+    
 }
 
 #projects article{
@@ -10,28 +10,50 @@
   
 }
 
+
 #projects .singe-project{
     width: 400px;
     height: 400px;
-    background-color: aquamarine;
     border-radius: 10px;
     margin: 0 3vh 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-}
-
-
-#projects .singe-project:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: all 0.5s ease-in-out;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+#projects .singe-project:nth-of-type(2),
+#projects .singe-project:nth-of-type(4)
+{
+    background-color:  #B09F91;
+
+    }
+    #projects .singe-project:nth-of-type(1),
+    #projects .singe-project:nth-of-type(3),
+    #projects .singe-project:nth-of-type(5)
+    {
+        background-color: #C0BAB3;
+       
+        }
+
+
+   
+
+#projects .singe-project:hover{
+
+    transform: scale(1.1);
+    animation: backgroundIMG 1s linear
+}
+
  #projects #bird:hover{
  background-image: url(./bird.png);
-}
+
+} 
 
 #projects #fit-life:hover{
     background-image: url(./fit-life-main.png);
@@ -51,7 +73,11 @@
   background-image: url(./beauty-salon-main.png);
 }
 
-
+@keyframes backgroundIMG {
+    0% { opacity: 10%;}
+    50% { opacity:50%;}
+    100% { opacity:100%;}
+  }
 
 
 #projects .singe-project h3{
@@ -74,14 +100,28 @@ display: none;
     display: none;
 }
 
+
+
+@media (max-width:1400px) {
+    #projects .singe-project:nth-of-type(2),
+    #projects .singe-project:nth-of-type(3),
+    #projects .singe-project:nth-of-type(5)
+    {
+        background-color: #B09F91;;
+        }
+    #projects .singe-project:nth-of-type(4){
+            background-color: #C0BAB3;
+        }
+}
+
+
+
 @media (max-width:915px) {
     #projects .singe-project{
         width: 80%;
     }
 
-    /* #projects #bird:hover{
-        background-image: url(./bird.png);
-       } */
+
        
        #projects #fit-life:hover{
            background-image: url(./fitLife.png);
@@ -98,4 +138,32 @@ display: none;
        #projects #beauty-salon:hover{
          background-image: url(./beautyStudio.png);
        }
+
+       #projects .singe-project:nth-of-type(even){
+        background-color: #B09F91;
+        }
+        #projects .singe-project:nth-of-type(odd){
+            background-color: #C0BAB3;
+            }
+}
+
+@media (max-width:700px) {
+    #projects #fit-life:hover{
+        background-image: url(./fit-life-main.png);
+       }
+    
+    #projects #food-and-cocktails:hover{
+        background-image: url(./foodAndCocktails.png);
+       }
+    
+     #projects #creativeNess:hover{
+        background-image: url(./creativeNessMain.png);
+    }
+    
+    #projects #beauty-salon:hover{
+      background-image: url(./beauty-salon-main.png);
+      background-position: top;
+    }
+
+ 
 }
