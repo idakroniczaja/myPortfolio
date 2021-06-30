@@ -8,7 +8,7 @@ export default function AboutMe({aboutRef}) {
             <article>
 
                 <div className='about-image'>
-                 
+                 ffffff
                 </div> 
 
                 <div className='about-text'>
