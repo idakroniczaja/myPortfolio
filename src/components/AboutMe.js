@@ -8,13 +8,11 @@ export default function AboutMe({aboutRef}) {
             <article>
 
                 <div className='about-image'>
-                 ffffff
+            
                 </div> 
 
                 <div className='about-text'>
                 <p id='greeting'>Hello, my name is Ida! </p>
-                I was borni in Serbia, 
-                Eastern Europe and I currently live in Miami. 
                 I’m problem-solver passionate about creating digital experiences. 
                 I'm all about combining design with web development, 
                 balancing both in order to bring meaningful experiences alive. 

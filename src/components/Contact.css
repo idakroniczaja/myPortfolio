@@ -1,4 +1,88 @@
 #contact{
-    height: 500px;
     background-color: seashell;
+}
+
+#contact article {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+#contact .background-image{
+    width: 100%;
+    height: 40%;
+    background-image: url(./pexels-math-331684.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#contact .background-image h3{
+ font-size: calc(2rem + 1vw); 
+ padding-right: 1em;   
+ width: 30%;
+ text-align: center;
+}
+
+
+#contact .contact-info{
+    width: 100%;
+    height: 60%;
+    background-image: linear-gradient(45deg,#ffffff,#dadada, #b1b1b1 ) ;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+#contact .phone{
+    /* background-color: sienna; */
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+/* #email{
+    background-color: slategrey;
+} */
+
+#email::before{
+    content: "Email:";
+    display: flex;
+    color: #968F82;
+
+}
+
+#contact .message{
+background-color: white;
+height: 90%;
+border-radius: 10px;
+
+}
+
+#contact #logo{
+font-family:monospace;
+font-size: 2rem;    
+color: #3c3d38;
+padding: 0 2em;
+text-shadow: 0 0 0.15em #3c3d38;
+user-select: none;
+white-space: nowrap;
+filter: blur(0.007em);
+animation: shake 2.5s linear infinite;
+font-size:calc(1rem + 1vw); 
+
+}
+
+#contact p #nav-logo{
+    border-top:2px solid #3c3d38 ;
 }
