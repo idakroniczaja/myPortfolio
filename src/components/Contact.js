@@ -8,23 +8,17 @@ export default function Contact({contactRef}) {
             <article>
 
                 <div className='background-image'>
-                    <h3>Get in touch with me!</h3>
+                    <form >
+                    <h3>Send message</h3>
+                    <input placeholder='your name'></input>
+                    <input placeholder='your email'></input>
+                    <input placeholder='message'></input>
+                    <button>Send message</button>
+                   
+                    </form>
                 </div>
 
-                <div className='contact-info'>
-                    <div className='phone'>
-                        <p id='logo'>Ida <br/><span id='nav-logo'>Development</span></p>
-                        <p id='email'>so.kida@hotmail.com</p>
-                    </div>
-                    <div className='message'>
-                        <form>
-                            <h3>Send Message</h3>
-                            <input placeholder='name' type="text"></input>
-                            <input placeholder='e-mail' type='email'></input>
-                            <input placeholder='Message' type="text"></input>
-                        </form>
-                    </div>
-                </div>
+            
 
             </article>
         </section>
