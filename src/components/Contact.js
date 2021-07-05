@@ -9,12 +9,11 @@ export default function Contact({contactRef}) {
 
                 <div className='background-image'>
                     <form >
-                    <h3>Send message</h3>
-                    <input placeholder='your name'></input>
-                    <input placeholder='your email'></input>
-                    <input placeholder='message'></input>
-                    <button>Send message</button>
-                   
+                        <h3>Send message</h3>
+                        <input placeholder='your name'></input>
+                        <input placeholder='your email'></input>
+                        <textarea placeholder='message' name="description"  rows="10"></textarea>
+                        <button>Send message</button>
                     </form>
                 </div>
 
