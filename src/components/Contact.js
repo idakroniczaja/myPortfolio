@@ -15,6 +15,9 @@ export default function Contact({contactRef}) {
                         <textarea placeholder='message' name="description"  rows="10"></textarea>
                         <button>Send message</button>
                     </form>
+                    <p>
+                        so.kida@hotmail.com
+                    </p>
                 </div>
 
             
