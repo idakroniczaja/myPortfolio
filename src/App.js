@@ -1,5 +1,9 @@
 import {useRef,forwardRef} from 'react'
 import './App.css';
+
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
+
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
@@ -21,14 +25,19 @@ function App() {
   const scrollToContact = () => contactRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
   return (
-    <div className="App">
-    <NavBar scrollToHeader={scrollToHeader} scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact}  />
-    <Header headerRef={headerRef}/>
-    <AboutMe aboutRef={aboutRef}/>
-    <Projects projectsRef={projectsRef}/>
-    <Contact contactRef={contactRef}/>
-     
-    </div>
+    <ParallaxProvider>
+        <div className="App">
+      
+            <NavBar scrollToHeader={scrollToHeader} scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact}  />
+   
+        <Parallax className="header" y={[20, -200]}>
+            <Header headerRef={headerRef}/>
+          </Parallax> 
+            <AboutMe aboutRef={aboutRef}/>
+            <Projects projectsRef={projectsRef}/>
+            <Contact contactRef={contactRef}/>
+        </div>
+    </ParallaxProvider>
   );
 }
 
