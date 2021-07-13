@@ -30,9 +30,9 @@ function App() {
       
             <NavBar scrollToHeader={scrollToHeader} scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact}  />
    
-        <Parallax className="header" y={[20, -200]}>
+      
             <Header headerRef={headerRef}/>
-          </Parallax> 
+         
             <AboutMe aboutRef={aboutRef}/>
             <Projects projectsRef={projectsRef}/>
             <Contact contactRef={contactRef}/>
