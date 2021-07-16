@@ -1,12 +1,12 @@
 import React from 'react';
 import './Projects.css'
 
-export default function Projects({projectsRef,}) {
+export default function Projects({projectsRef,dataAos}) {
 
 
 
     return (
-        <section ref={projectsRef} id='projects' className='container'>
+        <section data-aos={dataAos} ref={projectsRef} id='projects' className='container'>
              <h2>Projects</h2>
             <article>
             <div className='singe-project' id='bird'>

@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './AboutMe.css'
 
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 export default function AboutMe({aboutRef}) {
+
+
+    useEffect(() => {
+        Aos.init({duration:2000})
+    }, [])
+
+
     return (
         <section  ref={aboutRef} id='about' className='container'>
-            <h2>about me</h2>
+            <h2 >about me</h2>
             <article>
 
-                <div className='about-image'>
+                <div data-aos='slide-right' className='about-image'>
             
                 </div> 
 

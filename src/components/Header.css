@@ -1,28 +1,15 @@
-#header{
-    height: 40vh;
+.header{
+    height: 100vh;
     background-color: rgb(238,234,231);
-    min-height: 250px;
-    background: url(./artem-sapegin-b18TRXc8UPQ-unsplash.jpg);
+    min-height: 350px;
+    /* background: url(./artem-sapegin-b18TRXc8UPQ-unsplash.jpg);
     background-position:center;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:cover; */
     align-items: center;
     justify-content: center;
 }
-#header h1 {
-    position: relative;
-    font-size: calc(20px + 5vw);
-    font-weight: 700;
-    color: #3c3d38;
-    letter-spacing: 0.02em;
-    text-shadow: 0 0 0.15em #3c3d38;
-    filter: blur(0.007em);
-    animation: shake2 5s linear forwards, apear 1s linear;
-}
 
-#header h1 span{
-border-top: 3px solid #3c3d38; 
-}
 @keyframes apear {
     0%{ transform: translateX(-50%)}
     100%{ transform: translateX(0%)}

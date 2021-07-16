@@ -15,7 +15,8 @@
 
 #contact .background-image{
     width: 100%;
-    height: 100%;
+    height: 90%;
+    padding: 2.5em 0;
     background-image: url(./pexels-math-331684.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -23,51 +24,101 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     
 }
-
-
-
-
 
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: white;
+    background-color: rgba(255,255,255,0.7);
     position: absolute;
     margin: 2em;
-    width: 40%;
-    min-width: 400px;
+    width: 50%;
+    min-width: 450px;
     height: 50%;
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-   
+    animation: form 2s ease-in 0.5s 
 }
+
+@keyframes form {
+    0%{transform: translateX(-150%);}
+    100%{transform: translateX(0%);}
+}
+
 
 form input, form textarea{
     width: 60%;
 }
 
+form textarea{
+    border: none;
+    padding: 1em;
+    border: none;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    transition: all 0.3s linear;
+}
+
 form input{
     border: none;
-    border-bottom: 1px solid black;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    transition: all 0.3s linear;
+    
+}
+
+form input:focus, form textarea:focus{
+    transform: scale(110%);
+}
+
+form button{
+    margin: 2em;
+    width: 150px;
+      font-size: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+      height: 50px;
+      border: none;
+      padding: 1em;
+      border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    transition: all 0.3s linear;
+    background-color: white;
+}
+
+form button:hover{
+    cursor: pointer;
+    box-shadow: 4px 4px 60px rgba(0,0,0,0);
+    transform: scale(120%);
+    background-color: rgb(238, 238, 238);
+}
+
+#form{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#email{
+padding-bottom: 2em;
+font-size: 2rem;
+text-shadow: 0 0 0.15em #3c3d38;
+animation: shake 2.5s linear infinite;
 }
 
 
-#contact .background-image p{
-background-color: red;
-}
-
-/* @media (max-width:900px){
-    #contact .background-image{
-        background-position:left;
-        justify-content:space-around;
-        align-items: center;
-    }
-
-} */
 
 
 
