@@ -9,14 +9,17 @@ export default function Projects({projectsRef,dataAos}) {
         <section data-aos={dataAos} ref={projectsRef} id='projects' className='container'>
              <h2>Projects</h2>
             <article>
-            <div className='singe-project' id='bird'>
+            <a href='https://idakroniczaja.github.io/Game/' target="_blank" className='singe-project' >
+                  <div id='bird' >
                 <h3>Chubby Bird Game</h3>
                 <div>
                     <p><span>Description: </span>A single-player JavaScript based, created with OOP Principles. The player moves on mouse click.</p>
                     <p><span>Technologies used:</span> JavaScript, jQuery, Git, HTML, CSS</p>
                 </div>
 
-            </div>
+            </div> 
+            </a>
+         
 
             <div className='singe-project' id='fit-life'>
                 <h3>Fit Life</h3>

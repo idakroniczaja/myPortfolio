@@ -10,6 +10,9 @@
   
 }
 
+#projects a .singe-project{
+    text-decoration: none;
+}
 
 #projects .singe-project{
     width: 400px;
@@ -25,7 +28,9 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
+
 
 #projects .singe-project:nth-of-type(2),
 #projects .singe-project:nth-of-type(4)
@@ -89,6 +94,7 @@
 #projects .singe-project div{
     padding: 1em;
     text-align: justify;
+    
 
 }
 
