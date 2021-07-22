@@ -10,8 +10,15 @@
   
 }
 
-#projects a .singe-project{
+#projects a{
     text-decoration: none;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
 }
 
 #projects .singe-project{
