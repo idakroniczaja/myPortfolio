@@ -9,19 +9,19 @@ export default function Projects({projectsRef,dataAos}) {
         <section data-aos={dataAos} ref={projectsRef} id='projects' className='container'>
              <h2>Projects</h2>
             <article>
-            <a href='https://idakroniczaja.github.io/Game/' target="_blank" className='singe-project' >
-                  <div id='bird' >
+            <a href='https://idakroniczaja.github.io/Game/' target="_blank" className='singe-project' id='bird' >
+              
                 <h3>Chubby Bird Game</h3>
                 <div>
                     <p><span>Description: </span>A single-player JavaScript based, created with OOP Principles. The player moves on mouse click.</p>
                     <p><span>Technologies used:</span> JavaScript, jQuery, Git, HTML, CSS</p>
                 </div>
 
-            </div> 
+           
             </a>
          
-
-            <div className='singe-project' id='fit-life'>
+            <a href='https://idakroniczaja.github.io/Game/' target="_blank" className='singe-project' id='fit-life' >
+            
                 <h3>Fit Life</h3>
                 <div>
                     <p><span>Description: </span>Web app with a friendly user interface, that lets you create, read, update and delete your
@@ -31,9 +31,10 @@ fit API</p>
                 </div>
                 
 
-            </div>
+            
+            </a>
+            <a href='https://idakroniczaja.github.io/Game/' target="_blank" className='singe-project' id='food-and-cocktails'  >
 
-            <div className='singe-project' id='food-and-cocktails'>
                 <h3>Food and Cocktails</h3>
                 <div>
                     <p><span>Description: </span>Search for your favorite food and cocktails recipe at once. You can find different recipes for
@@ -42,8 +43,8 @@ your favorite food, and pair it with cocktails you want to make.</p>
 API, thecocktaildb API</p>
                 </div>
 
-            </div>
-            
+      
+            </a>
 
             <div className='singe-project' id='creativeNess'>
                 <h3>CreativeNess</h3>
