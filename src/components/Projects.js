@@ -45,18 +45,18 @@ API, thecocktaildb API</p>
 
       
             </a>
+            <a href='https://idakroniczaja.github.io/Game/' target="_blank" className='singe-project' id='creativeNess'  >
 
-            <div className='singe-project' id='creativeNess'>
                 <h3>CreativeNess</h3>
                 <div>
                     <p><span>Description: </span>  You can post your crafts and DIY projects, see what other users posted, comment on different
 posts, find events in your location you are interested in, find inspirational photos and videos.</p>
                     <p><span>Technologies used:</span> React.js, JavaScript, Node.js, Express.js, MongoDB, Bootstrap, pexels API,
 predicthq API</p>
-                </div>
-
+              
             </div>
-          
+            </a>
+
 
             <div className='singe-project' id='beauty-salon'>
                 <h3>Nafkar Beauty salon</h3>
