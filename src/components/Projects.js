@@ -57,8 +57,8 @@ predicthq API</p>
             </div>
             </a>
 
-
-            <div className='singe-project' id='beauty-salon'>
+            <a href='https://idakroniczaja.github.io/Game/' target="_blank" className='singe-project' id='beauty-salon'  >
+        
                 <h3>Nafkar Beauty salon</h3>
                 <div>
                     <p><span>Description: </span>Webpage for privately-owned beauty salon with responsive layout, mobile friendly, and full backend for owner to
@@ -66,7 +66,7 @@ predicthq API</p>
                     <p><span>Technologies used:</span> React.js, JavaScript, Sanity</p>
                 </div>
 
-            </div>
+            </a>
 
 
 
