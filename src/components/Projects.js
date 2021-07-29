@@ -20,7 +20,7 @@ export default function Projects({projectsRef,dataAos}) {
            
             </a>
          
-            <a href='https://idakroniczaja.github.io/Game/' target="_blank" className='singe-project' id='fit-life' >
+            <a href='https://fit-life2.herokuapp.com' target="_blank" className='singe-project' id='fit-life' >
             
                 <h3>Fit Life</h3>
                 <div>
