@@ -33,7 +33,7 @@ fit API</p>
 
             
             </a>
-            <a href='https://idakroniczaja.github.io/Game/' target="_blank" className='singe-project' id='food-and-cocktails'  >
+            <a href='https://cocky-easley-6f6b99.netlify.app' target="_blank" className='singe-project' id='food-and-cocktails'  >
 
                 <h3>Food and Cocktails</h3>
                 <div>
