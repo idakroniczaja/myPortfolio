@@ -45,7 +45,7 @@ API, thecocktaildb API</p>
 
       
             </a>
-            <a href='https://idakroniczaja.github.io/Game/' target="_blank" className='singe-project' id='creativeNess'  >
+            <a href='https://creativeness.netlify.app' target="_blank" className='singe-project' id='creativeNess'  >
 
                 <h3>CreativeNess</h3>
                 <div>
