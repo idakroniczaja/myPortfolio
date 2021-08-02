@@ -57,7 +57,7 @@ predicthq API</p>
             </div>
             </a>
 
-            <a href='https://idakroniczaja.github.io/Game/' target="_blank" className='singe-project' id='beauty-salon'  >
+            <a href='https://nafkarbeauty.netlify.app' target="_blank" className='singe-project' id='beauty-salon'  >
         
                 <h3>Nafkar Beauty salon</h3>
                 <div>
