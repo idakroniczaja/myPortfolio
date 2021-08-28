@@ -1,7 +1,15 @@
 import React from 'react'
 import './Contact.css'
+import emailjs from 'emailjs-com';
 
 export default function Contact({contactRef, dataAos}) {
+
+const sendEmail = (e) => {
+    e.prevendDefault(e)
+
+    emailjs.sendForm()
+}
+
     return (
         <section data-aos={dataAos}ref={contactRef} id='contact' className='container'>
             <h2>Contact</h2>
@@ -9,7 +17,7 @@ export default function Contact({contactRef, dataAos}) {
 
                 <div className='background-image'>
                  <div id='form'>
-                    <form >
+                    <form onSubmit={sendEmail}>
                         <h3>Send message</h3>
                         <input placeholder='your name'></input>
                         <input placeholder='your email'></input>
