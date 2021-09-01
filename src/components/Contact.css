@@ -7,7 +7,7 @@
     height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
    
 }
 
@@ -35,7 +35,6 @@ form{
     justify-content: space-around;
     background-color: rgba(255,255,255,0.7);
     position: absolute;
-    margin: 2em;
     width: 50%;
     min-width: 450px;
     height: 50%;

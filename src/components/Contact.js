@@ -1,18 +1,28 @@
-import React from 'react'
+import React, {useState} from  'react'
 import './Contact.css'
 import emailjs from 'emailjs-com';
 
 export default function Contact({contactRef, dataAos}) {
+
+const [message, setMessage] = useState('')
+
 
 const sendEmail = (e)=> {
 e.preventDefault()
  
     emailjs.sendForm("service_aowrs29","template_lb3tbjx", e.target ,"user_DSGHm0rdiLjlkKMr2aVXe")
     .then(res=>{
-        console.log(res.text)
+        res.text==='OK' ? setMessage('OK') : setMessage('not ok')
     }).catch(err=>console.log(err.text))
     e.target.reset()
 }
+
+const displayMessage = ()=>{
+    return (
+        <p>{message}</p>
+    )
+}
+
   
     return (
         <section data-aos={dataAos}ref={contactRef} id='contact' className='container'>
@@ -34,8 +44,10 @@ e.preventDefault()
                     <div id='email'>
                         so.kida@hotmail.com
                     </div>
-
+                        {displayMessage()}
                 </div>
+
+                
 
             
 
