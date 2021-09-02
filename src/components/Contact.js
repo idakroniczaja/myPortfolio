@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 
 export default function Contact({contactRef, dataAos}) {
 
-const [message, setMessage] = useState('')
+const [message, setMessage] = useState('some mesage')
 
 
 const sendEmail = (e)=> {
@@ -17,20 +17,14 @@ e.preventDefault()
     e.target.reset()
 }
 
-const displayMessage = ()=>{
-    return (
-        <p>{message}</p>
-    )
-}
 
   
     return (
         <section data-aos={dataAos}ref={contactRef} id='contact' className='container'>
             <h2>Contact</h2>
+
             <article>
 
-                <div className='background-image'>
-                 <div id='form'>
                     <form onSubmit={sendEmail}>
                         <h3>Send message</h3>
                         <input name='name' type='text' placeholder='your name'/>
@@ -38,18 +32,13 @@ const displayMessage = ()=>{
                         <textarea placeholder='message' name="message"  rows="10"/>
                         <button type='submit'>Send</button>
                     </form>  
-                  </div>
+             
+           
+                    <p id='message'>{message}</p>
+
+                    <p id='email'>so.kida@hotmail.com</p>
                     
-
-                    <div id='email'>
-                        so.kida@hotmail.com
-                    </div>
-                        {displayMessage()}
-                </div>
-
-                
-
-            
+               
 
             </article>
         </section>
