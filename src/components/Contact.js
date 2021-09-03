@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 
 export default function Contact({contactRef, dataAos}) {
 
-const [message, setMessage] = useState('some mesage')
+const [message, setMessage] = useState('Your mesage has been successfully sent')
 
 
 const sendEmail = (e)=> {
@@ -21,7 +21,7 @@ e.preventDefault()
   
     return (
         <section data-aos={dataAos}ref={contactRef} id='contact' className='container'>
-            <h2>Contact</h2>
+            <h2>Contact ME</h2>
 
             <article>
 
@@ -36,7 +36,7 @@ e.preventDefault()
            
                     <p id='message'>{message}</p>
 
-                    <p id='email'>so.kida@hotmail.com</p>
+                    {/* <p id='email'>so.kida@hotmail.com</p> */}
                     
                
 

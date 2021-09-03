@@ -96,12 +96,17 @@ form button:hover{
 
 
 #message{
-    background-color: burlywood;
+    font-size: calc(1rem + 1vw);    
+    text-shadow: 0 0 0.15em #3c3d38;
+    animation: shake 2.5s linear infinite;
 }
-
+/* 
 #email{
     background-color: coral;
-}
+    font-size: calc(1.5rem + 1vw);    
+    text-shadow: 0 0 0.15em #3c3d38;
+    animation: shake 2.5s linear infinite;
+} */
 
 
 
