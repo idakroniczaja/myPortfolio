@@ -7,14 +7,21 @@ import { TiTimes } from 'react-icons/ti';
 import {useTransition, animated} from 'react-spring';
 import './NavBar.css';
 
+import { motion } from 'framer-motion'
+
+
+
+
 export default function NavBar({scrollToHeader, scrollToAbout, scrollToProjects, scrollToContact }) {
 const [toggle, setToggle]= useState(false)
 const [windowWidt, setWindowWidth] = useState(window.innerWidth)
+const [lastYPos, setLastYPos] = useState(0)
+const [shouldShowAction, setShouldShowActions] = useState(false)
 
 const transition = useTransition(toggle,(p)=>p,{
     from: {transform: 'scaleY(0)', transformOrigin:'top'},
-    enter: { transform: 'scale(1) ', transformOrigin:'top'},
-    leave: { transform: 'scale(0)', transformOrigin:'top'},
+    enter: { transform: 'scaleY(1) ', transformOrigin:'top'},
+    leave: { transform: 'scaleY(0)', transformOrigin:'top'},
  
 });
 
@@ -37,10 +44,40 @@ useEffect(() => {
   
   },[window.innerWidth])
 
-    return (
-        <nav id='nav-bar'>
 
-        <p>Ida <br/><span id='nav-logo'>Development</span></p>
+
+useEffect(() => {
+
+function handleScroll(){
+const yPos = window.scrollY;
+const isScrollingUp = yPos < lastYPos
+
+setShouldShowActions(isScrollingUp)
+setLastYPos(yPos)
+
+
+}
+
+  window.addEventListener('scroll', handleScroll, false)
+
+return ()=>{
+    window.removeEventListener('scroll', handleScroll, false)
+}
+
+
+  
+  },[lastYPos])
+
+
+
+    return (
+        <motion.nav id='nav-bar' 
+        animate={{height:shouldShowAction ? '100px' : '50px'}} 
+        initial={{height:'100px'}} 
+        transition={{height: {duration:0.5}}}
+        >
+
+        <p>Ida </p>
 
         <div id='burger-menu' onClick={()=>setToggle(!toggle)}>
         {toggle ? <TiTimes /> : <HiMenu />  } 
@@ -61,6 +98,6 @@ useEffect(() => {
          
          }
         
-        </nav>
+        </motion.nav>
     )
 }
