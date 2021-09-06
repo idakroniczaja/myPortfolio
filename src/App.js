@@ -1,4 +1,4 @@
-import {useRef,useEffect} from 'react'
+import {useRef,useEffect, useState} from 'react'
 import './App.css';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
@@ -10,7 +10,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact'
 
 
-import image1 from './components/artem-sapegin-b18TRXc8UPQ-unsplash.jpg'
+import image1 from './components/pexels-karolina-grabowska-5208871.jpg'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
@@ -20,16 +20,13 @@ function App() {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
+
+
  
   const scrollToHeader = () => headerRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
   const scrollToAbout = () => aboutRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
   const scrollToProjects = () => projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
   const scrollToContact = () => contactRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-
-useEffect(()=>{
-  Aos.init({ duration:2000 });
-},[])
 
 
   return (
@@ -39,7 +36,7 @@ useEffect(()=>{
             <NavBar scrollToHeader={scrollToHeader} scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact}  />
    
       
-            <Header image1={image1} headerRef={headerRef}/>
+            <Header headerRef={headerRef}/>
 
 
             <AboutMe  aboutRef={aboutRef}/>
