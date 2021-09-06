@@ -34,3 +34,8 @@ h2{
   box-shadow: inset 0px 0px 15px 5px #968f82;
 
 }
+
+a{
+  text-decoration: none;
+  color: #494949;
+}
