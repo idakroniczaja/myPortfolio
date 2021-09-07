@@ -22,21 +22,18 @@ const [shouldShowAction, setShouldShowActions] = useState(true)
 
 const handleResize = () => {
     setWindowWidth(window.innerWidth);
-    handleToggle()
+    console.log(window.windowWidt)
+    windowWidt > 1000 && setToggle(false)
 }
-const handleToggle = ()=> {
-    if(window.innerWidth<1000){
-                 setToggle(false)
-                    }
-   if(window.innerWidth>=1000){
-       setToggle(true)
-   }
-}
+
 
 useEffect(() => {
     handleResize()
       window.addEventListener('resize', handleResize)
-  
+      return ()=>{
+      window.removeEventListener('resize', handleResize)
+      }
+
   },[window.innerWidth])
 
 
@@ -62,33 +59,31 @@ return ()=>{
     return (
         <motion.nav id='nav-bar' 
         animate={{height:shouldShowAction ? '80px' : '55px', background:shouldShowAction ? 'linear-gradient(#FFFFFF, #FFFFFF)' : 'linear-gradient(#ebe4df, #f3ede6)'}} 
-        initial={{height:'88px', background:'linear-gradient(#FFFFFF, #FFFFFF)'}} 
+        initial={{height:'80px', background:'linear-gradient(#FFFFFF, #FFFFFF)'}} 
         transition={{height: {duration:0.3}, background:{delay:0.3, duration:0.5, transitionTimingFunction: "linear"}}}
         >
 
         <p onClick={scrollToHeader}>ida</p>
 
         <div id='burger-menu' onClick={()=>setToggle(!toggle)}>
-        {toggle ? <AiOutlineClose  id='burger-close'/> : <HiMenu id='burger-close'/>  } 
+        {toggle ? <HiMenu id='burger-close'/> : <AiOutlineClose id='burger-close'/>  } 
               
         </div>
 
             <motion.ul
-            animate={{translateY:toggle ? '0%': '-150%'}}
+            animate={{translateY:!toggle ? '0%': '-150%'}}
                     initial={{translateY:'0%'}}
                     transition={{translateY:{duration:1}}}
-
-
             >
-                <li onClick={scrollToHeader} ><Link onClick={()=>setToggle(false)} id='homeLink'>Home</Link></li>
-                <li onClick={scrollToAbout}><Link onClick={()=>setToggle(false)}>About</Link></li>
-                <li onClick={scrollToProjects}><Link onClick={()=>setToggle(false)}>Projects</Link></li>
-                <Link onClick={()=>setToggle(false)}> <motion.li
-                    onClick={scrollToContact}
-                    id='contactLink'
-                    animate={{backgroundColor:(shouldShowAction && toggle) ? '#f3ede6': 'transparent'}}
-                    initial={{backgroundColor:'#f3ede6'}}
-                    transition={{backgroundColor:{delay:0.3, duration:0.5}}}
+                <li onClick={scrollToHeader} ><Link  onClick={()=>setToggle(false)} id='homeLink'>Home</Link></li>
+                <li onClick={scrollToAbout}><Link >About</Link></li>
+                <li onClick={scrollToProjects}><Link >Projects</Link></li>
+                <Link > <motion.li
+                    // onClick={scrollToContact}
+                    // id='contactLink'
+                    // animate={{backgroundColor:(shouldShowAction && toggle) ? '#f3ede6': 'transparent'}}
+                    // initial={{backgroundColor:'#f3ede6'}}
+                    // transition={{backgroundColor:{delay:0.3, duration:0.5}}}
                 >
                 Contact
                 </motion.li></Link>

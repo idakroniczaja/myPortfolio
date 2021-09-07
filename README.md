@@ -12,5 +12,8 @@ gainsboro #ebe4df #fee hsl(25,23%,89%) rgb(235,228,223)
 BURGER MENU
 gray #a19368 #a97 hsl(45,23%,51%) rgb(161,147,104)
 
+HEADER
+#dfd4ca #edd lightgray hsl(28,24%,83%) rgb(223,212,202)
+
 
 'BohemeFloral',Helvetica,Arial,Lucida,sans-serif!important

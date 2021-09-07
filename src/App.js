@@ -40,8 +40,8 @@ function App() {
 
 
             <AboutMe  aboutRef={aboutRef}/>
-            <Projects dataAos='fade-down' projectsRef={projectsRef}/>
-            <Contact  dataAos='fade-down' contactRef={contactRef}/>
+            <Projects  projectsRef={projectsRef}/>
+            <Contact   contactRef={contactRef}/>
         
     </ParallaxProvider>
   );
