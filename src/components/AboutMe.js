@@ -13,23 +13,27 @@ export default function AboutMe({aboutRef}) {
 
 
     return (
-        <section  ref={aboutRef} id='about' className='container'>
-            <h2 >about me</h2>
+        <section  ref={aboutRef} id='about'>
             <article>
-
-                <div data-aos='slide-right' className='about-image'>
-            
-                </div> 
-
-                <div className='about-text'>
-                <p id='greeting'>Hello, my name is Ida! </p>
+                <h2>About me</h2>
+                <span>
                 I’m problem-solver passionate about creating digital experiences. 
-                I'm all about combining design with web development, 
+                I'm all about combining design with functionality, 
                 balancing both in order to bring meaningful experiences alive. 
-                If you like my work, don’t hesitate to reach out.
-                <p id='signature'>Ida Kronic Zaja</p>
-                </div>
+                If you like my work, don’t hesitate to reach out.</span>
             </article>
+
+            <div id='about-image'>
+            
+                <img src='../images/about-me.jpg'></img>
+                <div id='name'><p>Ida</p></div>
+                <div id='background'></div>
+            </div>
+
+       
+
+          
         </section>
     )
 }
+
