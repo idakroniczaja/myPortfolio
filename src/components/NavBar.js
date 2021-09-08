@@ -79,11 +79,11 @@ return ()=>{
                 <li onClick={scrollToAbout}><Link >About</Link></li>
                 <li onClick={scrollToProjects}><Link >Projects</Link></li>
                 <Link > <motion.li
-                    // onClick={scrollToContact}
-                    // id='contactLink'
-                    // animate={{backgroundColor:(shouldShowAction && toggle) ? '#f3ede6': 'transparent'}}
-                    // initial={{backgroundColor:'#f3ede6'}}
-                    // transition={{backgroundColor:{delay:0.3, duration:0.5}}}
+                    onClick={scrollToContact}
+                    id='contactLink'
+                    animate={{backgroundColor:(shouldShowAction && toggle) ? '#f3ede6': 'transparent'}}
+                    initial={{backgroundColor:'#f3ede6'}}
+                    transition={{backgroundColor:{delay:0.3, duration:0.5}}}
                 >
                 Contact
                 </motion.li></Link>

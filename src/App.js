@@ -1,7 +1,6 @@
-import {useRef,useEffect, useState} from 'react'
+import {useRef, useEffect, useState} from 'react'
 import './App.css';
 
-import { ParallaxProvider } from 'react-scroll-parallax';
 
 import NavBar from './components/NavBar';
 import Header from './components/Header';
@@ -9,10 +8,6 @@ import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Contact from './components/Contact'
 
-
-import image1 from './components/pexels-karolina-grabowska-5208871.jpg'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 
 function App() {
   const headerRef = useRef(null);
@@ -30,20 +25,15 @@ function App() {
 
 
   return (
-    <ParallaxProvider className="App">
+    <div className="App">
    
-      
             <NavBar scrollToHeader={scrollToHeader} scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact}  />
-   
-      
-            <Header headerRef={headerRef}/>
-
-
-            <AboutMe  aboutRef={aboutRef}/>
-            <Projects  projectsRef={projectsRef}/>
-            <Contact   contactRef={contactRef}/>
+            <Header headerRef={headerRef} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact}/>
+            {/* <AboutMe  aboutRef={aboutRef}/> */}
+            {/* <Projects  projectsRef={projectsRef}/> */}
+            {/* <Contact   contactRef={contactRef}/> */}
         
-    </ParallaxProvider>
+    </div>
   );
 }
 
