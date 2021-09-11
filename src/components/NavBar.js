@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import { HiMenu } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 
-import {useTransition, animated} from 'react-spring';
 import './NavBar.css';
 
 import { motion } from 'framer-motion'

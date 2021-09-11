@@ -28,7 +28,7 @@ margin-right: 45vw;
     line-height: 2em!important;
     font-family: 'Frank Ruhl Libre', serif;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
     display: inline;
     padding: 5px 20px;
     background:linear-gradient(
@@ -36,17 +36,14 @@ margin-right: 45vw;
 }
 
 #about-image{
-    /* background-color: blue;  */
     margin-right: 50px;
-    width: 60%;
+    width: 50vw;
     display: flex;
     align-items:flex-start;
     justify-content:right;
     position: relative;
     padding-bottom: 50px;
     padding-right: 100px;
-
-
 }
 
 #about img{
@@ -65,21 +62,9 @@ margin-right: 45vw;
      height: 150px;
      width: 150px;
      border-radius: 50%;
-    
      position: absolute;
      align-self:flex-end;
 
-     /* margin-bottom: -50px;
-     margin-right: -50px;
-     font-family: 'BohemeFloral';
-     font-size: 80px;
-     font-weight: 500;
-     display: flex;
-     flex-direction: column;
-align-items: center;
-justify-content: center; */
-   
-   
 }
 #name::after{
 content: 'DEVELOPMENT';
@@ -89,25 +74,24 @@ font-size: 15px;
 }
 
 #name{
-    margin-bottom: -50px;
-    margin-right: -50px;
+    margin-bottom: -5%;
+    margin-right: -5%;
     font-family: 'BohemeFloral';
     font-size: 80px;
     font-weight: 500;
     display: flex;
     flex-direction: column;
-align-items: center;
-justify-content: center;
-z-index: 5;
-border: 1px solid black;
-  
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    border: 1px solid black;
 }
 
 #background{
     background: rgba(243, 237, 230,0.7);
     border-color: transparent;
-    margin-bottom: -60px;
-    margin-right: -70px;
+    margin-bottom: -6%;
+    margin-right: -7%;
 }
 
 
@@ -122,5 +106,30 @@ border: 1px solid black;
 
 
 @media(max-width:1000px){
+    #about{
+        flex-direction: column-reverse;
+        height:fit-content
+    }
 
+    #about article{
+        width: 80vw;
+        position: relative;
+        z-index: 1;
+        margin:0 0 50px 0;
+        
+        }
+
+        #about-image{
+            margin: 50px 0;
+            padding: 0;
+            width: 80vw;
+        }
+
+        #name{
+            font-size: 50px;
+        }
+        #about-image div{
+            height: 120px;
+            width: 120px;
+        }
 }
