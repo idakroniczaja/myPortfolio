@@ -1,6 +1,16 @@
+#projects{
+    background-color: aquamarine;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
 
+.project-wrapper{
+    background-color: blueviolet;
+    width: 500px;
+}
 
-#projects article{
+/* #projects article{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -177,4 +187,4 @@ display: none;
     }
 
  
-}
+} */

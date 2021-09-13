@@ -11,7 +11,7 @@ useEffect(() => {
     function handleScroll(){
         // const yPos = window.scrollY;
         // const isScrollingUp = yPos < lastYPos
-        window.scrollY>360 ? setShouldShowActions(true) : setShouldShowActions(false)
+        window.scrollY>360 &&  window.scrollY<960 ? setShouldShowActions(true) : setShouldShowActions(false)
         // setLastYPos(yPos)
     }
        

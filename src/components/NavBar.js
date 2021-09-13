@@ -15,7 +15,7 @@ export default function NavBar({scrollToHeader, scrollToAbout, scrollToProjects,
 const [toggle, setToggle]= useState(false)
 const [windowWidt, setWindowWidth] = useState(window.innerWidth)
 const [lastYPos, setLastYPos] = useState(0)
-const [shouldShowAction, setShouldShowActions] = useState(true)
+const [shouldShowAction, setShouldShowActions] = useState(false)
 
 
 
@@ -40,10 +40,11 @@ useEffect(() => {
 useEffect(() => {
 
 function handleScroll(){
-const yPos = window.scrollY;
-const isScrollingUp = yPos < lastYPos
-setShouldShowActions(isScrollingUp)
-setLastYPos(yPos)
+// const yPos = window.scrollY;
+// const isScrollingUp = yPos < lastYPos
+// setShouldShowActions(isScrollingUp)
+// setLastYPos(yPos)
+window.scrollY>10 ? setShouldShowActions(false) : setShouldShowActions(true)
 }
 
   window.addEventListener('scroll', handleScroll, false)
@@ -57,9 +58,9 @@ return ()=>{
 
     return (
         <motion.nav id='nav-bar' 
-        animate={{height:shouldShowAction ? '80px' : '55px', background:shouldShowAction ? 'linear-gradient(#FFFFFF, #FFFFFF)' : 'linear-gradient(#ebe4df, #f3ede6)'}} 
-        initial={{height:'80px', background:'linear-gradient(#FFFFFF, #FFFFFF)'}} 
-        transition={{height: {duration:0.3}, background:{delay:0.3, duration:0.5, transitionTimingFunction: "linear"}}}
+            animate={{height:shouldShowAction ? '80px' : '55px', background:shouldShowAction ? 'linear-gradient(#FFFFFF, #FFFFFF)' : 'linear-gradient(#ebe4df, #f3ede6)'}} 
+            initial={{height:'80px', background:'linear-gradient(#FFFFFF, #FFFFFF)'}} 
+            transition={{height: {duration:0.3}, background:{delay:0.3, duration:0.5, transitionTimingFunction: "linear"}}}
         >
 
         <p onClick={scrollToHeader}>ida</p>

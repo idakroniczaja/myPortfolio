@@ -30,7 +30,7 @@ function App() {
             <NavBar scrollToHeader={scrollToHeader} scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact}  />
             <Header headerRef={headerRef} scrollToProjects={scrollToProjects} scrollToContact={scrollToContact}/>
             <AboutMe  aboutRef={aboutRef}/>
-            {/* <Projects  projectsRef={projectsRef}/> */}
+            <Projects  projectsRef={projectsRef}/>
             {/* <Contact   contactRef={contactRef}/> */}
         
     </div>
