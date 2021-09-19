@@ -1,0 +1,32 @@
+[
+    {
+        "name": "project 1",
+        "image":"./fitLife.png",
+        "description":"graldsjfkljlsdjk dsjf jlsjli ",
+        "technologies_used":"JavaScript, jQuery, Git, HTML, CSS"
+    },
+    {
+        "name": "project 2",
+        "image":"./foodAndCocktails.png",
+        "description":"graldsjfkljlsdjk dsjf jlsjli ",
+        "technologies_used":"JavaScript, jQuery, Git, HTML, CSS"
+    },
+    {
+        "name": "project 3",
+        "image":"./beautyStudio.png",
+        "description":"graldsjfkljlsdjk dsjf jlsjli ",
+        "technologies_used":"JavaScript, jQuery, Git, HTML, CSS"
+    },
+    {
+        "name": "project 4",
+        "image":"./bird.png",
+        "description":"graldsjfkljlsdjk dsjf jlsjli ",
+        "technologies_used":"JavaScript, jQuery, Git, HTML, CSS"
+    },
+    {
+        "name": "project 5",
+        "image":"./creativeNess.png",
+        "description":"graldsjfkljlsdjk dsjf jlsjli ",
+        "technologies_used":"JavaScript, jQuery, Git, HTML, CSS"
+    }
+]

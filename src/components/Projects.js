@@ -1,23 +1,82 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './Projects.css'
+import { motion } from 'framer-motion'
+import projects from './projects.json'
 
 
 
 export default function Projects({projectsRef}) {
+
+const [myProjects, setMyProjects] = useState([])
+const [counter, setCounter] = useState(2)
+const [shouldShowAction, setShouldShowActions] = useState(false)
+// const [style, setStyle] = useState(true)
+// const [opacity, setOpacity] = useState(1)
+
+// const each_project ={
+//     color:'red',
+//     transform: 'all 1s ease'
+// }
+
+useEffect(()=>{
+    // let filtered = projects.filter((e,i)=>i<3)
+    setMyProjects(projects)
+  
+    
+    
+},[])
+
+const handle_forward =()=>{
+        setCounter(counter+1)
+        let forward = myProjects.slice(1)
+        forward.push(projects[counter+1])
+        setMyProjects(forward)
+        if(counter===projects.length-2){
+            setCounter(-1)
+        }
+
+        setShouldShowActions(!shouldShowAction)
+
+  
+}
+
+const handle_backward =()=>{
+    
+} 
+
+
+const showProjects = () => {
+    return myProjects.map((eachProject,i,arr)=>{
+        return (
+            <motion.div key={i} className="each_project" 
+            
+            // animate={{translateX: shouldShowAction ? '0%' : '-130%'}} 
+            //         initial={{translateX:'-130%'}} 
+            //         transition={{translateX: {duration:2}}}
+                    >
+            <div className='details'>
+              <h3>{eachProject.name}</h3>
+            </div>
+          
+        
+            </motion.div>
+        )
+    })
+}
 
 
 
     return (
         <section ref={projectsRef} id='projects'>
              <h2>Projects</h2>
-
+             <div>
+                <button onClick={handle_forward}>Forward</button>
+                <button onClick={handle_backward}>Backward</button>
+             </div>
   
             <article>
-                <div>
-                    <div>
-                        <img src='../images/about-me.jpg' width='500px'/>
-                    </div>
-                </div>
+          { showProjects() }
+               
 
 
 
