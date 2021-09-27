@@ -8,7 +8,7 @@ import projects from './projects.json'
 export default function Projects({projectsRef}) {
 
 const [myProjects, setMyProjects] = useState([])
-const [counter, setCounter] = useState(2)
+const [counter, setCounter] = useState(0)
 const [shouldShowAction, setShouldShowActions] = useState(false)
 // const [style, setStyle] = useState(true)
 // const [opacity, setOpacity] = useState(1)
@@ -21,27 +21,50 @@ const [shouldShowAction, setShouldShowActions] = useState(false)
 useEffect(()=>{
     // let filtered = projects.filter((e,i)=>i<3)
     setMyProjects(projects)
-  
-    
-    
 },[])
 
 const handle_forward =()=>{
-        setCounter(counter+1)
-        let forward = myProjects.slice(1)
-        forward.push(projects[counter+1])
-        setMyProjects(forward)
-        if(counter===projects.length-2){
-            setCounter(-1)
+         setCounter(counter+1)
+        // let forward = myProjects.slice(1)
+        // forward.push(projects[counter+1])
+        // console.log(forward, counter)
+        // setMyProjects(forward)
+        // if(counter===projects.length-2){
+        //     setCounter(-1)
+        // }
+
+        let newProject = [...myProjects]
+
+        //removing first element
+        newProject.shift()
+
+        //adding on the last place
+        newProject.push(projects[counter])
+        setMyProjects(newProject)
+
+        if (counter === projects.length - 1){
+            setCounter(0)
         }
 
-        setShouldShowActions(!shouldShowAction)
+        console.log(counter)
+
+    setShouldShowActions(!shouldShowAction)
 
   
 }
 
 const handle_backward =()=>{
-    
+    // setCounter(counter-1)
+    // myProjects.pop()
+    // //myProjects.unshift(projects[counter-1])
+    // console.log(myProjects, counter)
+    // // backward.push(projects[counter-1])
+    // // setMyProjects(backward)
+    // // if(counter === 1){
+    // //     setCounter(-1)
+    // // }
+
+    // setShouldShowActions(!shouldShowAction)
 } 
 
 
