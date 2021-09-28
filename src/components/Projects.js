@@ -10,6 +10,7 @@ export default function Projects({projectsRef}) {
 const [myProjects, setMyProjects] = useState([])
 const [counter, setCounter] = useState(0)
 const [shouldShowAction, setShouldShowActions] = useState(false)
+
 // const [style, setStyle] = useState(true)
 // const [opacity, setOpacity] = useState(1)
 
@@ -19,28 +20,48 @@ const [shouldShowAction, setShouldShowActions] = useState(false)
 // }
 
 useEffect(()=>{
-    // let filtered = projects.filter((e,i)=>i<3)
     setMyProjects(projects)
+ 
+
 },[])
 
-const handle_forward =()=>{
-         setCounter(counter+1)
-        // let forward = myProjects.slice(1)
-        // forward.push(projects[counter+1])
-        // console.log(forward, counter)
-        // setMyProjects(forward)
-        // if(counter===projects.length-2){
-        //     setCounter(-1)
-        // }
+const handle_backward = () => {
 
-        let newProject = [...myProjects]
+    setCounter(counter - 1)
+    let backwardProjects = [...myProjects]
+
+    //removing last element
+    backwardProjects.pop()
+
+    //adding on the first place
+    backwardProjects.unshift(projects[counter])
+
+    //setting state
+    setMyProjects(backwardProjects)
+
+     //counter can't go under projects array
+    if (counter === 0){
+        setCounter(projects.length - 1)
+    }
+
+    console.log(counter)
+
+} 
+
+const handle_forward = () => { 
+        setCounter(counter + 1)
+        let forwardProject = [...myProjects]
 
         //removing first element
-        newProject.shift()
+        forwardProject.shift()
 
         //adding on the last place
-        newProject.push(projects[counter])
-        setMyProjects(newProject)
+        forwardProject.push(projects[counter])
+
+        //setting state
+        setMyProjects(forwardProject)
+
+        //counter can't go over length of project array
 
         if (counter === projects.length - 1){
             setCounter(0)
@@ -53,19 +74,6 @@ const handle_forward =()=>{
   
 }
 
-const handle_backward =()=>{
-    // setCounter(counter-1)
-    // myProjects.pop()
-    // //myProjects.unshift(projects[counter-1])
-    // console.log(myProjects, counter)
-    // // backward.push(projects[counter-1])
-    // // setMyProjects(backward)
-    // // if(counter === 1){
-    // //     setCounter(-1)
-    // // }
-
-    // setShouldShowActions(!shouldShowAction)
-} 
 
 
 const showProjects = () => {
