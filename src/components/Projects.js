@@ -10,14 +10,8 @@ export default function Projects({projectsRef}) {
 const [myProjects, setMyProjects] = useState([])
 const [counter, setCounter] = useState(0)
 const [shouldShowAction, setShouldShowActions] = useState(false)
+const [click, setClick] = useState(1)
 
-// const [style, setStyle] = useState(true)
-// const [opacity, setOpacity] = useState(1)
-
-// const each_project ={
-//     color:'red',
-//     transform: 'all 1s ease'
-// }
 
 useEffect(()=>{
     setMyProjects(projects)
@@ -27,49 +21,52 @@ useEffect(()=>{
 
 const handle_backward = () => {
 
-    setCounter(counter - 1)
-    let backwardProjects = [...myProjects]
+    // setCounter(counter - 1)
+    // let backwardProjects = [...myProjects]
 
-    //removing last element
-    backwardProjects.pop()
+    // //removing last element
+    // backwardProjects.pop()
 
-    //adding on the first place
-    backwardProjects.unshift(projects[counter])
+    // //adding on the first place
+    // backwardProjects.unshift(projects[counter])
 
-    //setting state
-    setMyProjects(backwardProjects)
+    // //setting state
+    // setMyProjects(backwardProjects)
 
-     //counter can't go under projects array
-    if (counter === 0){
-        setCounter(projects.length - 1)
-    }
+    //  //counter can't go under projects array
+    // if (counter === 0){
+    //     setCounter(projects.length - 1)
+    // }
 
-    console.log(counter)
+    setShouldShowActions(false)
+    setClick(click - 1)
 
 } 
 
 const handle_forward = () => { 
-        setCounter(counter + 1)
-        let forwardProject = [...myProjects]
+        // setCounter(counter + 1)
+        // let forwardProject = [...myProjects]
 
-        //removing first element
-        forwardProject.shift()
+        // //removing first element
+        // forwardProject.shift()
 
-        //adding on the last place
-        forwardProject.push(projects[counter])
+        // //adding on the last place
+        // forwardProject.push(projects[counter])
 
-        //setting state
-        setMyProjects(forwardProject)
+        // //setting state
+        // setMyProjects(forwardProject)
 
-        //counter can't go over length of project array
+        // //counter can't go over length of project array
 
-        if (counter === projects.length - 1){
-            setCounter(0)
-        }
+        // if (counter === projects.length - 1){
+        //     setCounter(0)
+        // }
 
-        console.log(counter)
+        // console.log(counter)
 
-    setShouldShowActions(!shouldShowAction)
+    setShouldShowActions(true)
+    setClick(click + 1)
+
 
   
 }
@@ -80,10 +77,9 @@ const showProjects = () => {
     return myProjects.map((eachProject,i,arr)=>{
         return (
             <motion.div key={i} className="each_project" 
-            
-            // animate={{translateX: shouldShowAction ? '0%' : '-130%'}} 
-            //         initial={{translateX:'-130%'}} 
-            //         transition={{translateX: {duration:2}}}
+                    animate={{translateX: setShouldShowActions ? `-${600*click}px` : `${600*click}px`}} 
+                    // initial={{translateX:'-130%'}} 
+                    transition={{translateX: {duration:2}}}
                     >
             <div className='details'>
               <h3>{eachProject.name}</h3>
