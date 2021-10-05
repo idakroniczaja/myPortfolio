@@ -64,9 +64,37 @@ const handle_forward = () => {
 
         // console.log(counter)
 
+
+
     setShouldShowActions(true)
     setClick(click + 1)
+    //if click is more that array lenth
+    // do{
+    // let forwardProject = [...myProjects]
 
+    //     //removing first element
+    //     forwardProject.shift()
+
+    //     //adding on the last place
+    //     forwardProject.push(projects[counter])
+
+    //     //setting state
+    //     setMyProjects(forwardProject)
+    // } while (click >=3)
+//  if (click >=3 ){
+//     setCounter(counter + 1)
+ 
+//     let forwardProject = [...myProjects]
+
+//         //removing first element
+//         forwardProject.shift()
+
+//         //adding on the last place
+//         forwardProject.push(projects[counter])
+
+//         //setting state
+//         setMyProjects(forwardProject)
+//  }
 
   
 }
